@@ -59,10 +59,10 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			var trialDuration = "NA";
 			var prompt = "NA";
 			
-			var circle1 = paper.circle(125, 350, 90);
-			var circle2 = paper.circle(325, 350, 90);
-			var circle3 = paper.circle(525, 350, 90);
-			var circle4 = paper.circle(125, 350, 90);
+			var circle1 = paper.circle(225, 350, 90);
+			var circle2 = paper.circle(425, 350, 90);
+			var circle3 = paper.circle(625, 350, 90);
+			var circle4 = paper.circle(125, 550, 90);
 			var circle5 = paper.circle(325, 550, 90);
 			var circle6 = paper.circle(525, 550, 90);
         // var circle7 = paper.circle(525, 550, 90); 
