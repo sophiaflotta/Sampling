@@ -61,7 +61,7 @@ var jsPsychProductionTestSinglepic = (function (jspsych) {
   
 		//add prompt text
 		//display_element.append(trial.question + trial.label + "?");
-		var text = paper.text(400, 30, trial.question);
+		var text = paper.text(400, 100, trial.question);
 		var text2 = paper.text(400, 55, trial.question2);
 		var finishText = paper.text(400, 75, trial.finishText);
 		text.attr({
