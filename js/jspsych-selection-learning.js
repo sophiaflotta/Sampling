@@ -121,7 +121,7 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			
 
 			// Prompt Text
-			var prompt = paper.text(425, 535, trial.question);
+			var prompt = paper.text(425, 135, trial.question);
 			prompt.attr({
 				"text-anchor": "middle",
 				"font-weight": "bold"
