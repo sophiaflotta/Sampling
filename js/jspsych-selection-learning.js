@@ -62,9 +62,9 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			var circle1 = paper.circle(225, 350, 90);
 			var circle2 = paper.circle(425, 350, 90);
 			var circle3 = paper.circle(625, 350, 90);
-			var circle4 = paper.circle(125, 550, 90);
-			var circle5 = paper.circle(325, 550, 90);
-			var circle6 = paper.circle(525, 550, 90);
+			var circle4 = paper.circle(225, 550, 90);
+			var circle5 = paper.circle(425, 550, 90);
+			var circle6 = paper.circle(625, 550, 90);
         // var circle7 = paper.circle(525, 550, 90); 
 		// var circle8 = paper.circle(725, 550, 90);
 			
@@ -79,12 +79,12 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			});
 			
 			var imageLocations = {
-				pos1: [50, 275],
-				pos2: [250, 275],
-				pos3: [450, 275],
-				pos4: [50, 475],
-				pos5: [250, 475],
-				pos6: [450, 475],
+				pos1: [150, 275],
+				pos2: [350, 275],
+				pos3: [550, 275],
+				pos4: [10, 475],
+				pos5: [350, 475],
+				pos6: [550, 475],
 				//pos7: [450, 475],
 				//pos8: [650, 475],
 			};
