@@ -82,9 +82,9 @@ var jsPsychSelectionLearning = (function (jspsych) {
 				pos1: [50, 275],
 				pos2: [250, 275],
 				pos3: [450, 275],
-				pos4: [650, 275],
-				pos5: [50, 475],
-				pos6: [250, 475],
+				pos4: [50, 475],
+				pos5: [250, 475],
+				pos6: [450, 475],
 				//pos7: [450, 475],
 				//pos8: [650, 475],
 			};
