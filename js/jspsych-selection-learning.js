@@ -62,9 +62,9 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			var circle1 = paper.circle(125, 350, 90);
 			var circle2 = paper.circle(325, 350, 90);
 			var circle3 = paper.circle(525, 350, 90);
-			var circle4 = paper.circle(725, 350, 90);
-			var circle5 = paper.circle(125, 550, 90);
-			var circle6 = paper.circle(325, 550, 90);
+			var circle4 = paper.circle(125, 350, 90);
+			var circle5 = paper.circle(325, 550, 90);
+			var circle6 = paper.circle(525, 550, 90);
         // var circle7 = paper.circle(525, 550, 90); 
 		// var circle8 = paper.circle(725, 550, 90);
 			
@@ -111,7 +111,7 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			//var image7 = paper.image(trial.image7, imageLocations["pos7"][0], imageLocations["pos7"][1], trial.image_size[0],trial.image_size[1]);
 			//var image8 = paper.image(trial.image8, imageLocations["pos8"][0], imageLocations["pos8"][1], trial.image_size[0],trial.image_size[1]);
 			
-			var imageSet = Snap.set(image1, image2, image3, image4, image5, image6, image7, image8);
+			var imageSet = Snap.set(image1, image2, image3, image4, image5, image6);
 			var imageDict = {0: image1, 1: image2, 2: image3, 3: image4, 4: image5, 5: image6};
 			
 			var circleImageSet = Snap.set(
