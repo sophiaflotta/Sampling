@@ -6,10 +6,10 @@ var jsPsychSelectionLearning = (function (jspsych) {
 		parameters: {
 			selection_learning: {
 				type: jspsych.ParameterType.IMAGE,
-				default: ['image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8'],
+				default: ['image1', 'image2', 'image3', 'image4', 'image5', 'image6'],
 			},
 			selection_learning: {
-				default: ['label1', 'label2', 'label3', 'label4', 'label5', 'label6', 'label7', 'label8'],
+				default: ['label1', 'label2', 'label3', 'label4', 'label5', 'label6'],
 			},
 		},
 	};
@@ -36,10 +36,10 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			trial.question = trial.question || "Click on the person whose opinion you want to hear next.";
 			trial.timing_post_trial = typeof trial.timing_post_trial == 'undefined' ? 500 : trial.timing_post_trial;
 			trial.duration = trial.duration || 1000;
-			trial.imageArrayKey = trial.imageArrayKey || ["0", "1", "2", "3", "4", "5", "6", "7"];
-			trial.circleArrayKey = trial.circleArrayKey || ["0", "1", "2", "3", "4", "5", "6", "7"];
-			trial.imageArrayIndex = trial.imageArrayIndex || [0, 1, 2, 3, 4, 5, 6, 7];
-			trial.circleArrayIndex = trial.circleArrayIndex || [0, 1, 2, 3, 4, 5, 6, 7];
+			trial.imageArrayKey = trial.imageArrayKey || ["0", "1", "2", "3", "4", "5"];
+			trial.circleArrayKey = trial.circleArrayKey || ["0", "1", "2", "3", "4", "5"];
+			trial.imageArrayIndex = trial.imageArrayIndex || [0, 1, 2, 3, 4, 5];
+			trial.circleArrayIndex = trial.circleArrayIndex || [0, 1, 2, 3, 4, 5];
 			trial.button_html = trial.button_html || '<button class="jspsych-btn">%choice%</button>';
 			trial.finalPause = trial.finalPause || 500;
 
@@ -65,12 +65,12 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			var circle4 = paper.circle(725, 350, 90);
 			var circle5 = paper.circle(125, 550, 90);
 			var circle6 = paper.circle(325, 550, 90);
-			var circle7 = paper.circle(525, 550, 90);
-			var circle8 = paper.circle(725, 550, 90);
+        // var circle7 = paper.circle(525, 550, 90); 
+		// var circle8 = paper.circle(725, 550, 90);
 			
 			// create circle set and dict
-			var circleSet = Snap.set(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8);
-			var circleDict = {0: circle1, 1: circle2, 2: circle3, 3: circle4, 4: circle5, 5: circle6, 6: circle7, 7: circle8};
+			var circleSet = Snap.set(circle1, circle2, circle3, circle4, circle5, circle6);
+			var circleDict = {0: circle1, 1: circle2, 2: circle3, 3: circle4, 4: circle5, 5: circle6};
 			
 			circleSet.attr({
 				fill: "#00ccff",
@@ -85,8 +85,8 @@ var jsPsychSelectionLearning = (function (jspsych) {
 				pos4: [650, 275],
 				pos5: [50, 475],
 				pos6: [250, 475],
-				pos7: [450, 475],
-				pos8: [650, 475],
+				//pos7: [450, 475],
+				//pos8: [650, 475],
 			};
 			
 			var profileCircle = paper.circle(275, 125, 90);
@@ -108,15 +108,15 @@ var jsPsychSelectionLearning = (function (jspsych) {
 			var image4 = paper.image(trial.image4, imageLocations["pos4"][0], imageLocations["pos4"][1], trial.image_size[0],trial.image_size[1]);
 			var image5 = paper.image(trial.image5, imageLocations["pos5"][0], imageLocations["pos5"][1], trial.image_size[0],trial.image_size[1]);
 			var image6 = paper.image(trial.image6, imageLocations["pos6"][0], imageLocations["pos6"][1], trial.image_size[0],trial.image_size[1]);
-			var image7 = paper.image(trial.image7, imageLocations["pos7"][0], imageLocations["pos7"][1], trial.image_size[0],trial.image_size[1]);
-			var image8 = paper.image(trial.image8, imageLocations["pos8"][0], imageLocations["pos8"][1], trial.image_size[0],trial.image_size[1]);
+			//var image7 = paper.image(trial.image7, imageLocations["pos7"][0], imageLocations["pos7"][1], trial.image_size[0],trial.image_size[1]);
+			//var image8 = paper.image(trial.image8, imageLocations["pos8"][0], imageLocations["pos8"][1], trial.image_size[0],trial.image_size[1]);
 			
 			var imageSet = Snap.set(image1, image2, image3, image4, image5, image6, image7, image8);
-			var imageDict = {0: image1, 1: image2, 2: image3, 3: image4, 4: image5, 5: image6, 6: image7, 7: image8};
+			var imageDict = {0: image1, 1: image2, 2: image3, 3: image4, 4: image5, 5: image6};
 			
 			var circleImageSet = Snap.set(
-				circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8, 
-				image1, image2, image3, image4, image5,	image6,	image7,	image8
+				circle1, circle2, circle3, circle4, circle5, circle6, 
+				image1, image2, image3, image4, image5,	image6
 			);
 			
 
@@ -190,25 +190,25 @@ var jsPsychSelectionLearning = (function (jspsych) {
 				init_learning(choiceIndex, rt);
 			});
 	
-			image7.click(function() {
-				var end_time = (new Date()).getTime();
-				rt = end_time - start_time;
-				circle7.attr({
-					fill: "#FFD3D6"
-				});
-				choiceIndex = 6;
-				init_learning(choiceIndex, rt);
-			});
+			//image7.click(function() {
+				//var end_time = (new Date()).getTime();
+				//rt = end_time - start_time;
+				//circle7.attr({
+				//	fill: "#FFD3D6"
+				//});
+				//choiceIndex = 6;
+				//init_learning(choiceIndex, rt);
+			//});
 	
-			image8.click(function() {
-				var end_time = (new Date()).getTime();
-				rt = end_time - start_time;
-				circle8.attr({
-					fill: "#FFD3D6"
-				});
-				choiceIndex = 7;
-				init_learning(choiceIndex, rt);
-			});
+			//image8.click(function() {
+			//	var end_time = (new Date()).getTime();
+			//	rt = end_time - start_time;
+			//	circle8.attr({
+			//		fill: "#FFD3D6"
+			//	});
+			//	choiceIndex = 7;
+			//	init_learning(choiceIndex, rt);
+			//});
 			
 			const init_learning = (choiceIndex, rt) => {
 				image1.unclick();
@@ -217,8 +217,8 @@ var jsPsychSelectionLearning = (function (jspsych) {
 				image4.unclick();
 				image5.unclick();
 				image6.unclick();
-				image7.unclick();
-				image8.unclick();
+				//image7.unclick();
+				//image8.unclick();
 				
 				// choice info
 				choiceLabel = trial.stims[trial.stimNames[trial.curLocationList[choiceIndex]]]["word"];
@@ -357,8 +357,8 @@ var jsPsychSelectionLearning = (function (jspsych) {
 					"image4": trial.image4,
 					"image5": trial.image5,
 					"image6": trial.image6,
-					"image7": trial.image7,
-					"image8": trial.image8,
+					//"image7": trial.image7,
+					//"image8": trial.image8,
 					"choice": choiceIndex,
 					"learningLocationChoice": trial.learningPos[0],
 					"choiceLabel": choiceLabel,
